@@ -1,0 +1,146 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONLINE CALCULATOR</title>
+
+    <script>
+        function dis(val) {
+            document.getElementById("result").value += val
+        }
+
+
+        function solve() {
+            let x = document.getElementById("result").value
+            let y = eval(x)
+            document.getElementById("result").value = y
+        }
+
+        function clr() {
+            document.getElementById("result").value = ""
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: white;
+        }
+        
+        .cen {
+            width: 410px;
+            height: 430px;
+            border-width: 2px solid black;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 20px;
+            background-color: black;
+        }
+        
+        .result {
+            color: rgb(4, 4, 12);
+            border-radius: 35px;
+            border-color: blue solid;
+            background-color: rgb(31, 28, 28);
+            width: 300px;
+            height: 55px;
+            font-size: 30px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .clr {
+            color: rgb(214, 48, 48);
+            border-radius: 35px;
+            border-color: blue solid;
+            background-color: rgb(31, 28, 28);
+            width: 80px;
+            height: 50px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        
+        .bn {
+            color: rgb(4, 4, 12);
+            border-radius: 35px;
+            background-color: rgb(31, 28, 28);
+            width: 58px;
+            height: 45px;
+            margin: 10px;
+            font-size: 25px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .name {
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+            background-color: rgb(31, 28, 28);
+            width: 360px;
+            border-radius: 15px;
+        }
+        
+        .eq {
+            background-color: green;
+            border-radius: 35px;
+            width: 85px;
+            height: 60px;
+            margin: 10px;
+            font-size: 25px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .bnr {
+            color: green;
+            border-radius: 35px;
+            width: 58px;
+            height: 45px;
+            margin: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            background-color: rgb(31, 28, 28);
+        }
+        
+        .tag {
+            text-align: center;
+            font-weight: bold;
+            font-size: 40px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tag">ONLINE CALCULATOR</div>
+    <br>
+    <div class="cen">
+        <br>
+        <div class="name">RAHUL RAUNIYAR</div><br>
+        <input class="result" type="text" id="result" />
+        <input class="clr" type="button" value="Clr" onclick="clr()" />
+        <br><br>
+        <input class="bn" type="button" value="1" onclick="dis('1')" />
+        <input class="bn" type="button" value="2" onclick="dis('2')" />
+        <input class="bn" type="button" value="3" onclick="dis('3')" />
+        <input class="bnr" type="button" value="+" onclick="dis('+')" />
+        <input class="bn" type="button" value="4" onclick="dis('4')" />
+        <input class="bn" type="button" value="5" onclick="dis('5')" />
+        <input class="bn" type="button" value="6" onclick="dis('6')" />
+        <input class="bnr" type="button" value="-" onclick="dis('-')" />
+        <input class="bn" type="button" value="7" onclick="dis('7')" />
+        <input class="bn" type="button" value="8" onclick="dis('8')" />
+        <input class="bn" type="button" value="9" onclick="dis('9')" />
+        <input class="bnr" type="button" value="/" onclick="dis('/')" />
+        <input class="bnr" type="button" value="." onclick="dis('.')" />
+        <input class="bn" type="button" value="0" onclick="dis('0')" />
+        <input class="bnr" type="button" value="*" onclick="dis('*')" />
+        <input class="eq" type="button" value="=" onclick="solve()" />
+    </div>
+</body>
+
+</html>
